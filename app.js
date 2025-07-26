@@ -3,9 +3,10 @@ import mongoose from "mongoose";//nos conecta a mongodb
 import express from "express";//crea servidor local
 import dotenv from "dotenv";//trae las variables de entorno
 import cors from "cors";//crea seguridad en el servidor
+import { test } from "./backend/controllers/alumnos.controller.js";
 
 dotenv.config();//iniciando las variables de entorno
-g
+
 
 //conectar a la base de datos
 mongoose.connect(process.env.urlbd)
@@ -21,3 +22,5 @@ app.use(cors()); //segudirad en el servidor
 app.listen(4000, ()=>{
     console.log("se escucha el servidor")
 })//verificando funcionalidad del servidor
+
+test();
